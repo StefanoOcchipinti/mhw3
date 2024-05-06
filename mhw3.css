@@ -1,0 +1,935 @@
+body {
+    margin: 0;
+    font-family: "Archivio", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+}
+
+:root{
+    --bianco: #FFFFFF;
+    --nero: #222529;
+}
+
+a {
+    color: var(--nero);
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 0;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+
+a:hover:after {
+    width: 100%;
+    background: var(--nero);
+}
+
+button{
+    transition: background-color 0.4s, color 0.4s;
+}
+
+#upper-bar{
+    display: flex;
+    justify-content: center;
+    background-color: var(--nero);
+    height:6vh;
+    color: var(--bianco);
+    font-size: .8em;
+    text-align: center;
+}
+
+.scrolling-text {
+    white-space: nowrap;
+    overflow: hidden;
+    animation: scroll 24s ease-in-out infinite;
+}
+
+@keyframes scroll {
+    from { transform: translateX(500%); }
+    to { transform: translateX(-500%); }
+}
+
+#lower-bar{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 8vh;
+    width: 100%;
+    font-size: .9em;
+}
+
+#ita{
+    margin-left: 10.5vw;
+    text-decoration: none;
+}
+
+#eng{
+    margin-left: 2vw;
+    text-decoration: none;
+}
+
+#servizio-clienti{
+    white-space: nowrap; /* Impedisce al testo di andare a capo*/
+    margin-left: 50%;
+    margin-right: 0.5vw;
+    text-decoration: none;
+}
+
+#trustpilot{
+    height:30px;
+    width: 76px;
+    position: relative;
+    bottom: 7px;
+    margin-left: 1%;
+}
+
+#fb-ig{
+    height:32px;
+    width: 95px;
+    position: relative;
+    margin-left: 1%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    height: 13vh;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: var(--bianco);
+}
+
+#logo-nav{
+    height: 40px;
+    width: 170px;
+    position: relative;
+    margin-left: 10%;
+    margin-right: 210px;
+}
+
+.tendina1{
+    display: block;
+    position: relative;
+    height: 25%;
+    width: 5%;
+    margin-right: 6%;
+    white-space: nowrap;
+}
+
+.tendina2{
+    display: block;
+    position: relative;
+    height: 25%;
+    width: 6%;
+    white-space: nowrap;
+    margin-right: 5%;
+}
+
+#box1{
+    position: relative;
+    top: -15px;
+    text-align: center;
+}
+
+#box2{
+    position: relative;
+    top: -15px;
+    text-align: center;
+}
+
+#box3{
+    text-align: center;
+    margin-right: 10%;
+}
+
+.contenuto-tendina1{
+    width: 60vw;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 25px;
+    left: -200px;
+    padding: 6px;
+    background-color: rgb(248, 248, 248);
+    background-image:url(ninesquared-icon-menu1-1.png);
+    background-position:right center;
+    background-repeat:no-repeat;
+    background-size:contain;
+    border-radius: 3px;
+    font-size: 1rem;
+}
+
+.contenuto-tendina2{
+    width: 60vw;
+    display: none;
+    align-items: flex-start;
+    position: absolute;
+    top: 25px;
+    left: -370px;
+    padding: 6px;
+    background-color: rgb(248, 248, 248);
+    border-radius: 3px;
+    font-size: 1rem;
+}
+
+.t2{
+    display: flex;
+    width: 24%;
+    margin: 1%;
+    flex-direction: column;
+}
+
+.contenuto-tendina1 a:hover {
+    background-color: #f1f1f1;
+}
+
+.tendina1:hover .contenuto-tendina1 {
+    display: flex;
+}
+
+.contenuto-tendina2 a:hover {
+    background-color: #f1f1f1;
+}
+
+.tendina2:hover .contenuto-tendina2 {
+    display: flex;
+}
+
+#logo-ricerca{
+    height: 25px;
+    width: 25px;
+    position: relative;
+    margin-right: 10px;
+}
+
+#logo-account{
+    height: 22px;
+    width: 22px;
+    position: relative;
+    margin-right: 10px;
+}
+
+#logo-cuore{
+    height: 25px;
+    width: 25px;
+    position: relative;
+    margin-right: 5px;
+}
+
+#logo-carrello{
+    height: 30px;
+    width: 35px;
+    position: relative;
+    margin-right: 17%;
+}
+
+.hidden{
+    display: none;
+}
+
+nav2{
+    display: flex;
+    align-items: center;
+    height: 13vh;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    background-color: #f1f1f1;
+}
+
+.box-ricerca{
+    width: 85vw;
+    height: 20%;
+    margin-left: 5%;
+    margin-right: 2%;
+    background-color: #f1f1f1;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.box-ricerca:focus{
+    outline: none;
+}
+
+#logo-ricerca2{
+    width: 20px;
+    height: 20px;
+    margin-right: 1%;
+}
+
+#exit{
+    width: 16px;
+    height: 16px;
+}
+
+#modal-view{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 3;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal-exit{
+    height: 15px;
+    width: 15px;
+}
+
+.no-scroll{
+    overflow: hidden;
+}
+
+#login{
+    margin-top: 10%;
+    margin-left: 33%;
+    width: 30vw;
+    height: 55vh;
+    padding: 2%;
+    background-color: var(--bianco);
+}
+
+#login h4{
+    padding: -2%;
+}
+
+.box-text{
+    width: 100%;
+    height: 40px;
+    margin-top: -10px;
+}
+
+.button-login{
+    width: 100%;
+    height: 50px;
+    background-color: #222529;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 15px;
+    border: none;
+}
+
+.button-register{
+    width: 100%;
+    height: 50px;
+    background-color: #FFFFFF;
+    color: #222529;
+    text-align: center;
+    margin-top: 15px;
+    border: none;
+}
+
+header {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 850px;
+}
+
+.header-content {
+    position: absolute;
+    bottom: 10%;
+    left: 15%;
+    text-align: center;
+    z-index: 1;
+}
+
+#img-header {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+header h1 {
+    color: var(--bianco);
+    font-size: 50px;
+}
+
+.pulsante-header {
+    display: inline-block;
+    width: 300px;
+    padding: 3px;
+    margin-left: -50%;
+    color: var(--nero);
+    text-align: center;
+    background-color: var(--bianco);
+    border: none;
+}
+
+.pulsante-header:hover{
+    background-color: var(--nero);
+    color: var(--bianco);
+}
+
+section{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+
+.Manicotti{
+    width: 49%;
+    height: 100%;
+    margin-right: 1%;
+    margin-left: 1%;
+    background-image: url(ninesquared-armsleeves-home-1.jpg);
+    background-repeat: no-repeat;
+}
+
+.Manicotti h1{
+    margin-top: 60%;
+    margin-left: 15%;
+    margin-bottom: 15%;
+    color: var(--nero);
+    font-size: 500%;
+}
+
+.pulsante-manicotti{
+    width: 50%;
+    height: 40%;
+    margin-left: 15%;
+    margin-top: -15.5%;
+    margin-bottom: 5%;
+    padding: 0.01%;
+    color: var(--bianco);
+    background-color: var(--nero);
+    text-align: center;
+    border: none;
+}
+
+.Ginocchiere{
+    width: 49%;
+    height: 100%;
+    margin-left: 1%;
+    margin-right: 1%;
+    background-image: url(ninesquared-kneepads-home.jpg);
+    background-repeat: no-repeat;
+}
+
+.Ginocchiere h1{
+    margin-top: 60%;
+    margin-left: 15%;
+    margin-bottom: 15%;
+    color: var(--nero);
+    font-size: 500%;
+}
+
+.pulsante-ginocchiere{
+    width: 50%;
+    height: 40%;
+    margin-left: 15%;
+    margin-top: -15.5%;
+    margin-bottom: 5%;
+    padding: 0.01%;
+    color: var(--bianco);
+    background-color: var(--nero);
+    text-align: center;
+    border: none;
+}
+
+
+.pulsante-manicotti:hover, .pulsante-ginocchiere:hover{
+    background-color: var(--bianco);
+    color: var(--nero);
+}
+
+
+article{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.art1{
+    width: 14,5%;
+    height: 100%;
+    margin-left: 1.5%;
+    margin-right: 1%;
+}
+
+.art2{
+    width: 14,5%;
+    height: 100%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.art3{
+    width: 14,5%;
+    height: 100%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.art4{
+    width: 14,5%;
+    height: 100%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.art5{
+    width: 14,5%;
+    height: 100%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.art6{
+    width: 14,5%;
+    height: 100%;
+    margin-left: 1%;
+    margin-right: 1.5%;
+}
+
+.img-art{
+    width: 100%;
+}
+
+article h4{
+    color: gray;
+}
+
+section2{
+    display: flex;
+    width: 100%;
+    margin-top: 3%;
+    background-image: url(banner-teamwear-bgr.jpg);
+}
+
+#sec-sx{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+}
+
+#sec-dx{
+    display: flex;
+    width: 45%;
+    height: 100%;
+    margin-right: 5%;
+}
+
+#sec-sx h1{
+    font-size: 400%;
+    margin-top: 15%;
+}
+
+.pulsante-teamwear{
+    margin-top: -5%;
+    width: 40%;
+    height: 4%;
+    text-align: center;
+    background-color: var(--nero);
+    color: var(--bianco);
+    border: none;
+}
+
+.pulsante-teamwear:hover{
+    background-color: var(--bianco);
+    color: var(--nero);
+}
+
+#APIcontainer{
+    display: flex;
+    width: 99%;
+    height: 90vh;
+    align-items: flex-start;
+    margin-top: 3%;
+}
+
+#player{
+    margin-left: 5%;
+}
+
+.container-APISpotify{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 49vh;
+    width: 40vw;
+    margin-left: 5%;
+}
+
+#select_genre, #select_playlist{
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: var(--bianco);
+    background-color: #1DB954;
+    border: none;
+    padding: 2%;
+    border-radius: 40px;
+    margin: 1%;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+#btn_submit{
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: var(--bianco);
+    background-color: 	#457e59;
+    border: none;
+    padding: 2%;
+    border-radius: 40px;
+    margin: 1%;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    
+    
+}
+
+.risultato{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.song-list{
+    width: 40%;
+    height: 90%;
+    margin: 5%;
+}
+
+#song-detail{
+    width: 40%;
+    height: 90%;
+    margin: 5%;
+}
+
+.lista-tracce{
+    font-size: .9rem;
+}
+
+#img-traccia{
+    width: 60%;
+    height: auto;
+    position: relative;
+    left: 20%;
+}
+
+.titolo-traccia, .artista-traccia{
+    text-align: center;
+    padding: 2%;
+}
+
+#upper-footer{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 2%;
+    text-align: center;
+}
+
+.img-upf{
+    width: 10%;
+    height: 15%;
+    margin-top: 5%;
+}
+
+.item-uf{
+    height: 100%;
+    width: 20%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+#upper-footer h4{
+    color: gray;
+}
+
+#upper-footer h5{
+    color: rgba(159, 159, 159, 0.744);
+}
+
+#central-footer{
+    display: flex;
+    height: 100%;
+    margin-right: 10%;
+    margin-top: 3%;
+}
+
+.sx-cf{
+    width: 20%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.sx-cf a{
+    color: gray;
+    display: inline-block;
+    padding-bottom: 7px;
+}
+
+.mid-cf{
+    width: 25%;
+    margin-right: 5%;
+}
+
+.mid-cf a{
+    color: gray;
+    display: inline-block;
+    padding-bottom: 7px;
+}
+
+#dx-cf{
+    width: 70%;
+}
+
+#join-the-crew{
+    margin-top: 3%;
+}
+
+#social{
+    margin-left: 25%;
+}
+
+.box-nome{
+    width: 100%;
+    padding: 1%;
+    border-radius: 3px;
+    border: 1px solid lightgray;
+}
+
+.box-email{
+    width: 100%;
+    padding: 1%;
+    border-radius: 3px;
+    border: 1px solid lightgray;
+    margin-top: 2%;
+}
+
+#central-footer p{
+    font-size: small;
+    color: gray;
+}
+
+
+#bottone-invia{
+    color: var(--bianco);
+    background-color: var(--nero);
+    padding: 1%;
+    width: 20%;
+    margin-top: 3%;
+    text-align: center;
+    border-radius: 3px;
+}
+
+#bottone-invia:hover{
+    color: var(--nero);
+    background-color: var(--bianco);
+}
+
+#lower-footer{
+    display: flex;
+    width: 100%;
+    margin-top: 5%;
+    color: var(--bianco);
+    background-color: var(--nero);
+}
+
+.sx-lf{
+    width: 45%;
+    margin-right: 5%;
+    font-size: small;
+    text-align: center;
+}
+
+.dx-lf{
+    width: 45%;
+    margin-left: 5%;
+}
+
+#payment{
+    margin-left: 35%;
+    margin-top: 2%;
+    margin-bottom: 4%;
+}
+
+@media (max-width: 426px) {
+    
+    #servizio-clienti{
+        margin-left: 15%;
+    }
+
+    #logo-ricerca{
+        margin-right: 1%;
+    }
+
+    #logo-carrello{
+        margin-right: 5%;
+    }
+    
+    #logo-cuore{
+        display: none;
+    }
+
+    #logo-nav{
+    width: 30%;
+    height: 30%;
+    margin-right: 20%;
+    margin-left: 20%;
+    }
+
+    .box-ricerca{
+        width: 80vw;
+    }
+
+    #logo-ricerca2{
+        width: 4%;
+    }
+
+    #exit{
+        width: 3%;
+    }
+
+    #box1, #box2, #box3{
+        display: none;
+    }
+
+    .tendina{
+        display: none;
+    }
+
+    #img-header{
+        height: 30%;
+    }
+
+    .header-content h1{
+        font-size: 250%;
+        margin-right: 60%;
+    }
+
+    header{
+        height: 100%;
+    }
+
+    .pulsante-header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 180px;
+        height: 25px;
+        font-size: .7rem;
+        position: relative;
+        left: 180px;
+    }
+
+    section{
+        flex-direction: column;
+    }
+
+    .Manicotti{
+        width: 100%;
+        background-size: cover;
+    }
+
+    .Ginocchiere{
+        width: 100%;
+        margin-top: 2%;
+        background-size: cover;
+    }
+
+    .Manicotti h1{
+        font-size: 3rem;
+    }
+
+    .Ginocchiere h1{
+        font-size: 3rem;
+    }
+
+    article{
+        overflow-x: scroll;
+    }
+
+    .art1, .art2, .art3, .art4, .art5, .art6{
+        width: 30%;
+    }
+
+    section2{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #teamwear-img{
+        width: 350px;
+        margin-left: -40%;
+    }
+
+    .pulsante-teamwear{
+        margin-top: -20%;
+        margin-bottom: 10%;
+        width: 200%;
+    }
+
+    #upper-footer{
+        flex-direction: column;
+    }
+
+    .item-uf{
+        width: 90%;
+        margin-left: none;
+    }
+
+    #central-footer{
+        flex-direction: column;
+    }
+
+    .sx-cf, .mid-cf, #dx-cf{
+        width: 100%;
+        margin-left: 5%;
+    }
+
+    #lower-footer{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dx-lf{
+        margin-left: -41%;
+    }
+}
+
+   
+@media (max-width: 376px) {
+
+    #trustpilot{
+        display: none;
+    }
+
+    #logo-account, #logo-cuore{
+        display: none;
+    }
+
+   }
